@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎲 五子骰子游戏</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎲 五子骰子</h1>
+    <div id="status">剩余掷骰: <span id="rolls-left">3</span> | 第 <span id="turn">1</span>/13 轮</div>
+    
+    <div class="dice-area">
+      <div class="die" data-index="0">⚀<button class="hold-btn" data-index="0">保留</button></div>
+      <div class="die" data-index="1">⚀<button class="hold-btn" data-index="1">保留</button></div>
+      <div class="die" data-index="2">⚀<button class="hold-btn" data-index="2">保留</button></div>
+      <div class="die" data-index="3">⚀<button class="hold-btn" data-index="3">保留</button></div>
+      <div class="die" data-index="4">⚀<button class="hold-btn" data-index="4">保留</button></div>
+    </div>
+
+    <button id="roll-btn" class="primary-btn">🎲 掷骰子</button>
+
+    <table id="score-sheet">
+      <thead><tr><th>类别</th><th>得分</th><th>操作</th></tr></thead>
+      <tbody id="score-body"></tbody>
+      <tfoot><tr><td>总分</td><td colspan="2" id="total-score">0</td></tr></tfoot>
+    </table>
+
+    <button id="new-game-btn" class="secondary-btn">🔄 新游戏</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
